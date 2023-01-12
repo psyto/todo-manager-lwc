@@ -3,13 +3,13 @@ import { LightningElement, track } from 'lwc';
 export default class ToDoManager extends LightningElement {
     @track time = "8:15 PM";
     @track greeting = "Good Evening";
+    @track todos = [];
 
     connectedCallback() {
         this.getTime();
 
         setInterval( () => {
             this.getTime();
-            console.log("set interval called");
         }, 1000*60);
     }
 
@@ -43,6 +43,13 @@ export default class ToDoManager extends LightningElement {
         } else {
             this.greeting = "Good Evening";
         }
+    }
+
+    addTodoHandler() {
+        const inputBox = this.template.querySelector("lightning-input");
+        console.log("current value ", inputBox.value);
+        this.todos.push(inputBox.value);
+        inputBox.value = "";
     }
 
 }

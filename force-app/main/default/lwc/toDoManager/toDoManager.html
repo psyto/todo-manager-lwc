@@ -21,5 +21,15 @@
                 </lightning-layout-item>
             </lightning-layout>
         </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+            <div>UPCOMING</div>
+            <template for:each={todos} for:item="todo">
+                <div class="item-class" key={todo}>
+
+                </div>
+            </template>
+        </lightning-layout-item>
+
     </lightning-layout>
 </template>
