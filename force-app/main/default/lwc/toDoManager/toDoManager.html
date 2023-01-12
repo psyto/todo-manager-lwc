@@ -24,7 +24,18 @@
 
         <lightning-layout-item size="12">
             <div>UPCOMING</div>
-            <template for:each={todos} for:item="todo">
+            <template for:each={upcomingTodos} for:item="todo">
+                <div class="item-class" key={todo.todoId}>
+                    <span class="slds-text-heading_label">{todo.todoName}</span>
+                    <lightning-button-icon icon-name="utility:check" class="slds-var-p-horizontal_medium" onclick={updateHandler} title="Update Todo"></lightning-button-icon>
+                    <lightning-button-icon icon-name="utility:delete" onclick={deleteHandler} title="Delete Todo"></lightning-button-icon>
+                </div>
+            </template>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+            <div>COMPLETED</div>
+            <template for:each={completedTodos} for:item="todo">
                 <div class="item-class" key={todo.todoId}>
                     <span class="slds-text-heading_label">{todo.todoName}</span>
                     <lightning-button-icon icon-name="utility:check" class="slds-var-p-horizontal_medium" onclick={updateHandler} title="Update Todo"></lightning-button-icon>

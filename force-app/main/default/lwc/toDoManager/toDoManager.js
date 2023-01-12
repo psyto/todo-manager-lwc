@@ -57,4 +57,12 @@ export default class ToDoManager extends LightningElement {
         inputBox.value = "";
     }
 
+    get upcomingTasks() {
+        return this.todos && this.todos.length ? this.todos.filter(todo => !todo.done) : [];
+    }
+
+    get completedTasks() {
+        return this.todos && this.todos.length ? this.todos.filter(todo => todo.done) : [];
+    }
+
 }
