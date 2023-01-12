@@ -6,6 +6,6 @@
     }
   ],
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "https://backbase4-dev-ed.develop.my.salesforce.com/",
   "sourceApiVersion": "48.0"
 }
