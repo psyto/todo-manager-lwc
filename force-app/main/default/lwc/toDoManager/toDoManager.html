@@ -6,5 +6,20 @@
         <lightning-layout-item size="12">
             <div class="greeting">{greeting}</div>
         </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+            <div class="slds-text-heading_large slds-var-m-vertical_large">What is your main focus for today?</div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" large-device-size="6" medium-device-size="10" small-device-size="12" class="slds-var-m-top_large">
+            <lightning-layout>
+                <lightning-layout-item size="11">
+                    <lightning-input type="text" label="Whats in your mind" variant="label-hidden" placeholder="Whats in your mind"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="1">
+                    <lightning-button-icon icon-name="utility:add" title="Add todo" onclick={addTodoHandler}></lightning-button-icon>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
     </lightning-layout>
 </template>
